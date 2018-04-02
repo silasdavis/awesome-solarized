@@ -1,11 +1,12 @@
-Dark solarized awesomw wm theme
+Dark solarized awesome wm theme
 ===============================
 
-Based on Gwenhael Le Moine <gwenhael.le.moine@gmail.com> theme <https://github.com/gwenhael-le-moine/awesome-solarized/>.
+Based on Gwenhael Le Moine <gwenhael.le.moine@gmail.com> theme <https://github.com/gwenhael-le-moine/awesome-solarized>.
+
 Uses [Solarized color scheme][solarized].
 
 Uses images:
- - Wallpaper [Solarized mountains by 9beat7][solarized-mountains]
+ - Wallpaper [Solarized Mountains by 9beat7][solarized-mountains]
  - Titlebar icons from [default awesomwe wm theme][awesome-default]
  - Layout icons from [zenburn awesome wm theme][awesome-zenburn]
 
