@@ -29,3 +29,10 @@ I will use `~/.config/awesome/themes/solarized` as an example.
 Then initialize beatiful in your `rc.lua` with this theme (you can use absolute address or `awful.util.getdir("config")`):
 
     beautiful.init(awful.util.getdir("config").."/themes/solarized/theme.lua")
+
+Screenshots
+-----------
+
+![Empty](./Screenshot_1_no_windows.png)
+![Windows](./Screenshot_2_windows.png)
+![Calendar](./Screenshot_3_calendar.png)
