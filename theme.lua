@@ -9,6 +9,19 @@ local xresources = beautiful.xresources
 local dpi = xresources.apply_dpi
 local cur_theme_path = beautiful.theme_path
 
+-- {{{ Get svg function
+local cairo = require("lgi").cairo
+local gears = require("gears")
+
+local get_svg = function(filename, color)
+    local img = gears.surface.load_uncached(filename)
+    local cr = cairo.Context(img)
+    cr:set_source_rgba(gears.color.parse_color(color))
+    cr:mask(cairo.Pattern.create_for_surface(img), 0, 0)
+    return img
+end
+-- }}}
+
 local theme = {}
 theme.font = "Ubuntu 10"
 
@@ -93,8 +106,8 @@ theme.tooltip_border_width = dpi(1)
 -- }}}
 
 -- {{{ Titlebar icons
-theme.titlebar_close_button_normal = cur_theme_path.."titlebar/close_normal.png"
-theme.titlebar_close_button_focus  = cur_theme_path.."titlebar/close_focus.png"
+theme.titlebar_close_button_normal = get_svg(cur_theme_path.."titlebar/window-close.svg", theme.fg_normal)
+theme.titlebar_close_button_focus  = get_svg(cur_theme_path.."titlebar/window-close.svg", theme.fg_focus)
 
 theme.titlebar_minimize_button_normal = cur_theme_path.."titlebar/minimize_normal.png"
 theme.titlebar_minimize_button_focus  = cur_theme_path.."titlebar/minimize_focus.png"
@@ -143,7 +156,13 @@ theme.layout_tiletop = cur_theme_path.."layouts/tiletop.png"
 theme.awesome_icon = theme_assets.awesome_icon(
     theme.menu_height, theme.bg_focus, theme.fg_focus
 )
-theme.menu_submenu_icon = cur_theme_path.."submenu.png"
+theme.menu_submenu_icon = get_svg(cur_theme_path.."angle-right.svg", theme.fg_normal)
+theme.menu_bg_normal = theme.bg_normal
+theme.menu_fg_normal = theme.fg_normal
+theme.menu_bg_focus = theme.bg_focus
+theme.menu_fg_focus = theme.fg_focus
+theme.menu_border_color = theme.colors.green
+theme.menu_border_width = dpi(2)
 -- }}}
 
 -- {{{ Prompt
