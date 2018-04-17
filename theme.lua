@@ -150,12 +150,20 @@ theme.awesome_icon = theme_assets.awesome_icon(
 theme.menu_submenu_icon = cur_theme_path.."submenu.png"
 -- }}}
 
--- {{ Calendar
+-- {{{ Prompt
+theme.prompt_bg = theme.bg_normal
+theme.prompt_fg = theme.colors.green
+theme.prompt_bg_cursor = string.sub(theme.colors.cyan, 1, 7)
+theme.prompt_fg_cursor = string.sub(theme.bg_normal, 1, 7)
+theme.prompt_font = "Ubuntu Mono 16"
+-- }}}
+
+-- {{{ Calendar
 theme.calendar_style = {}
 theme.calendar_style.padding = dpi(10)
 theme.calendar_focus_border_color = theme.colors.green
 theme.calendar_font = "Ubuntu 14"
--- }}
+-- }}}
 
 return theme
 
