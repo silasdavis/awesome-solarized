@@ -51,6 +51,13 @@ theme.titlebar_bg_normal = theme.colors.base2 -- "#002b36ff"
 -- {{{ Taglist
 theme.taglist_fg_focus = theme.fg_focus
 theme.taglist_fg_focus = theme.bg_focus
+local taglist_square_size = dpi(5)
+theme.taglist_squares_sel = surface.load_from_shape(taglist_square_size, taglist_square_size, function(cr, width, height)
+    shape.transform(shape.pie):translate(width*-1, height*-1)(cr, width*2, height*2)
+end, theme.fg_normal)
+theme.taglist_squares_unsel = surface.load_from_shape(taglist_square_size, taglist_square_size, function(cr, width, height)
+    shape.transform(shape.arc):translate(width*-1, height*-1)(cr, width*2, height*2, dpi(1))
+end, theme.fg_normal)
 -- }}}
 
 -- {{{ Borders
@@ -111,17 +118,6 @@ theme.titlebar_maximized_button_normal_inactive = cur_theme_path.."titlebar/maxi
 theme.titlebar_maximized_button_focus_inactive  = cur_theme_path.."titlebar/maximized_focus_inactive.png"
 theme.titlebar_maximized_button_normal_active = cur_theme_path.."titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = cur_theme_path.."titlebar/maximized_focus_active.png"
--- }}}
-
-
--- {{{ Taglist "squares"
-local taglist_square_size = dpi(5)
-theme.taglist_squares_sel = surface.load_from_shape(taglist_square_size, taglist_square_size, function(cr, width, height)
-    shape.transform(shape.pie):translate(width*-1, height*-1)(cr, width*2, height*2)
-end, theme.fg_normal)
-theme.taglist_squares_unsel = surface.load_from_shape(taglist_square_size, taglist_square_size, function(cr, width, height)
-    shape.transform(shape.arc):translate(width*-1, height*-1)(cr, width*2, height*2, dpi(1))
-end, theme.fg_normal)
 -- }}}
 
 -- {{{ Layout icons
