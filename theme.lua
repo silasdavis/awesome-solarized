@@ -33,7 +33,7 @@ theme.colors.green   = "#859900ff"
 theme.wallpaper = cur_theme_path.."background.png"
 
 -- {{{ Colors
-theme.fg_normal  = theme.colors.base02 -- "#eee8d5ff"
+theme.fg_normal  = theme.colors.base01 -- "#93a1a1ff"
 theme.fg_focus   = theme.colors.base03 -- "#fdf6e3ff"
 theme.fg_urgent  = theme.colors.base3 -- "#002b36ff"
 
