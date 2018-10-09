@@ -43,7 +43,7 @@ theme.colors.blue    = "#268bd2ff"
 theme.colors.cyan    = "#2aa198ff"
 theme.colors.green   = "#859900ff"
 
-theme.wallpaper = cur_theme_path.."background.png"
+theme.wallpaper = cur_theme_path.."brazil-coos.jpg"
 
 -- {{{ Colors
 theme.fg_normal  = theme.colors.base01 -- "#93a1a1ff"
